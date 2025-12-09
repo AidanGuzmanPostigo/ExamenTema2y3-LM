@@ -795,7 +795,7 @@ Aquí se encuentran enlaces internos que llevan a las diferentes secciones.
     </nav>
 ```
 
-![Side](assets/side.png)
+![Side](assets/side-menu.png)
 
 Aquí se encuentran enlaces internos que llevan a las diferentes secciones.
 
