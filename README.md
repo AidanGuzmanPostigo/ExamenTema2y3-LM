@@ -877,3 +877,237 @@ Aquí se encuentra un enlace interno que lleva al inicio de la página.
 ```html
 <a href="#hero">&copy; 2025 — 1º DAM, IES Saladillo</a>
 ```
+
+### Ejercicios 4.3
+
+Selectores usados:
+
+De etiqueta:
+```css
+a{
+  text-decoration: none;
+}
+```
+De id:
+```css
+#RRSS{
+  display: flex;
+  flex-direction: column;
+  align-items: center; 
+  text-align: center;
+}
+```
+De clase:
+```css
+.contacto {
+  display: block;
+  width: 70%;
+  margin: auto;
+  text-align: center;
+}
+```
+Mixto (Mezcla de etiqueta, clase o id):
+```css
+em.boss{
+  color: #5642a1;
+}
+```
+Selector descendente: 
+```css
+#artConseguido figure img {
+  margin: auto;
+  width: 20%;
+}
+```
+Selector universal:
+```css
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: #9db0d0;
+  font-family: "Arsenal";
+}
+```
+Selector de agrupación:
+```css
+th, td {
+  text-align: center;
+}
+```
+
+Las pseudoclases usadas:
+
+Before y after
+```css
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: #9db0d0;
+  font-family: "Arsenal";
+}
+```
+Hover
+```css
+a img:hover {
+  transform: scale(1.03);
+}
+.contacto button:hover {
+  transform: scale(1.03);
+  box-shadow: 0 16px 30px black;
+}
+#Steam:hover {
+  background-color: transparent;
+}
+```
+Active
+```css
+button:active{
+  transform: scale(0.9);
+}
+```
+
+Flexbox y Grid:
+
+Flexbox usado:
+
+En el site header
+```css
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background-color: #1b5349;
+  padding: 1em;
+  display: flex;
+  align-items: center;
+  justify-content: right;
+}
+```
+En la lista desordenada dentro del panel principal de navegación
+```css
+.main-nav ul {
+  list-style: none;
+  display: flex;
+  gap: 10px;
+}
+```
+En las cartas de comodines
+```css
+#artContenido figure{
+  display: flex;
+  justify-content: center;
+}
+```
+En las imágenes de las colaboraciones
+```css
+#artConseguido figure.collab{
+  display: inline;
+  justify-content: flex-start;
+  margin-left: 10%;
+}
+```
+En los campos del formulario
+```css
+.contacto fieldset input{
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: .5em;
+}
+```
+En el section de redes sociales
+```css
+#RRSS{
+  display: flex;
+  flex-direction: column;
+  align-items: center; 
+  text-align: center;
+}
+```
+
+Grid se ha usado solamente en la galería de imágenes de manera que forme 4 columnas y 3 filas con una separación de 20px entre imágenes.
+```css
+#galery figure {
+  display: grid;
+  grid-template-rows: repeat(3, auto);
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+```
+He usado 2 box shadow:
+
+Al pasar el cursor por encima de de los botones del formulario
+```css
+.contacto button:hover {
+  transform: scale(1.03);
+  box-shadow: 0 16px 30px black;
+}
+```
+Y en el propio main
+```css
+main {
+  width: min(1100px, 90%); 
+  margin: 20px auto; 
+  background-color: #147969;
+  box-shadow: 13px 11px 22px -4px white;
+}
+```
+
+Respecto a mis menús, estos son los estilos que he aplicado
+
+Menú desplegable:
+```css
+.open-menu {
+  position: fixed;
+  top: 14px;
+  left: 10px;
+  z-index: 20;
+  font-size: 26px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+  font-family: "Balatro";
+}
+.side-menu {
+  position: fixed;
+  left: -230px;            
+  width: 230px;
+  height: 100%;
+  padding-top: 60px;
+  transition: left 0.3s ease;
+  z-index: 15;
+  background-color: #11685b;
+  font-family: "Balatro";
+}
+.side-menu.active {
+  left: 0;                 
+}
+.side-menu ul {
+  list-style: none;
+  padding: 0;
+}
+.side-menu a {
+  display: block;
+  padding: 12px 20px;
+  color: aqua;
+  font-family: "Balatro";
+}
+```
+Y para el menú de navegación principal:
+```css
+.site-header a {
+  font-family: "Balatro";
+}
+.main-nav ul {
+  list-style: none;
+  display: flex;
+  gap: 10px;
+}
+```
+
+Lo que he intentado con el diseño es tanto hacerlo visualmente atractivo para la persona que mire la página, que los colores tengan cierto sentido entre ellos y que se asemeje al estilo de Balatro, aunque usando colores más suaves.
+
+### Ejercicio 4.4
