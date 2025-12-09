@@ -1111,3 +1111,84 @@ Y para el menú de navegación principal:
 Lo que he intentado con el diseño es tanto hacerlo visualmente atractivo para la persona que mire la página, que los colores tengan cierto sentido entre ellos y que se asemeje al estilo de Balatro, aunque usando colores más suaves.
 
 ### Ejercicio 4.4
+
+De fuente local he usado la fuente que está en los archivos de Balatro (para conseguirla he descomprimido el .exe y estraído la fuente), la renombré a "Balatro.ttf" para poder trabajar con esta de manera más sencilla, la he usado únicamente en el header y en el menú desplegable
+```css
+.site-header h1 {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  font-family: "Balatro";
+}
+.site-header a {
+  font-family: "Balatro";
+}
+.open-menu {
+  position: fixed;
+  top: 14px;
+  left: 10px;
+  z-index: 20;
+  font-size: 26px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+  font-family: "Balatro";
+}
+.side-menu {
+  position: fixed;
+  left: -230px;            
+  width: 230px;
+  height: 100%;
+  padding-top: 60px;
+  transition: left 0.3s ease;
+  z-index: 15;
+  background-color: #11685b;
+  font-family: "Balatro";
+}
+.side-menu a {
+  display: block;
+  padding: 12px 20px;
+  color: aqua;
+  font-family: "Balatro";
+}
+```
+Y para el resto de la página use una fuente de google fonts llamada Arsenal
+```css
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: #9db0d0;
+  font-family: "Arsenal";
+}
+```
+La primera fuente la he usado por una razón muy simple, es la misma que la del juego, y la segunda simplemente la elegí ya que me gustaba el diseño de la topografía, ya que estuve barajando opciones pero no encontraba ninguna que quedase así de bien.
+
+### Ejercicio 4.5
+
+Al pulsar el botón del menú lateral este se despliega utilizando los valores de posición asignados en el css, la clase que cambia es open-menu, que se activa al abrir el menú por primera vez y deja de estar activa al cerrarse, utilizando el efecto de transición al volverse activa, se mueve mediante el uso de la propiedad transition, aquí el fragmento de css donde se gestiona el aspecto del menú lateral abierto
+```css
+.open-menu {
+  position: fixed;
+  top: 14px;
+  left: 10px;
+  z-index: 20;
+  font-size: 26px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+  font-family: "Balatro";
+}
+```
+
+### Ejercicio 4.6
+
+El hacer la web me ha resultado muy útil para recordar conocimientos que aprendí el año pasado en el módulo de Aplicaciones Web en el CFGM SMR, además de aprender sobre todo a usar flex (ya que el año pasado aprendí a posicionar los elementos en la web mediante la propiedad float) y un poco de javascript, aunque sea mínimo.
+
+Me gustaría mejorar en JavaScript ya que, me gusta mucho programar y, me gustaría aprender JavaScript ya que, lo poco que he programado en este ñlenguaje me he dado cuenta de que es muy flexible y cómodo, además me gustaría aprender a usar mejor grid, ya que es de los aspectos que más me cuestan.
+
+Lo que más me ha costado es hacer la galería con grid y, al principio me costó alinear los elementos del header con flex, aunque al final me acostumbré y usé flex en más partes de la web.
+
+La parte que más me gusta es la sección de contenido, por lo visual que lo he dejado con los em de colores y el gif al final de la página con el enlace a la tienda de Steam.
