@@ -129,6 +129,7 @@ En este caso ya tenía las imágenes como miniaturas ya que al haber usado grid 
 
 ### Ejercicio 3B
 En este caso ya disponía de un efecto para cuando el ratón pasase por las imágenes, justamente "transform: scale(1.03);" que está aplicado a todas las imágenes de la página web que contienen cualquier tipo de enlace, respecto al borde se le ha añadido un borde con background-color a todas las imágenes cuando el cursor pasa por ellas.
+(Revisión 09/12/2025 17:48 - Me acabo de dar cuenta de que realmente en vez de background color, lo que se debería haber realizado es la propiedad border: seguido de los parámetros deseados, lo apunto como pequeña anotación).
 
 ### Ejercicio 3C
 Mi página web también contaba con esta característica que simplemente es añadir un enlace a la imágen para que lleve a la ruta donde la imagen completa está alojada.
@@ -183,6 +184,8 @@ Mi página web trata sobre Balatro, un juego roguelike que a nivel personal me h
 
 ### Ejercicio 4.2
 El header está usado para mostrar el menú lateral desplegable, el título (h1) de la página web y los enlaces de la barra de navegación.
+Contiene los siguientes elementos: Título (h1), Botón para abrir el menú lateral desplegable y el menú principal de navegación.
+Este header es sticky ya que eso permite acceder a este menú mientras el usuario sigue desplazandose hacia debajo en la página, lo que permite el acceso rápido a las diferentes secciones de la web.
 
 ![Header](assets/header.png)
 
@@ -201,7 +204,7 @@ El header está usado para mostrar el menú lateral desplegable, el título (h1)
     <button class="open-menu" aria-label="Abrir menú lateral"><img id="toggleIcon" src="img/ficha_menu_notOpen.png" alt="Icono del menú"></button>
   </header>
 ```
-En el main se encuentra todo el contenido (secciones y artículos).
+En el main se encuentra todo el contenido dividido entre distintas secciones, además de que en la sección hero se encuentran todos los article con la información principal de la página.
 
 ![Main](assets/main.png)
 
@@ -428,7 +431,7 @@ En el main se encuentra todo el contenido (secciones y artículos).
 
 ```
 
-En los section utilizo las diferentes secciones de la web (Hero, gallery, table, form y RRSS).
+En los section se encuentran las diferentes secciones de la web (Hero, gallery, table, form y RRSS), cada una de estas con diferentes características.
 
 ![Table](assets/table.png)
 
@@ -531,7 +534,7 @@ En el menú superior o nav se encuentran los enlaces principales dentro de la ba
     </nav>
 ```
 
-El menú lateral consiste de un botón (acabé sustituyendolo por una imagen) que abre una barra lateral de búsqueda con enlaces a las secciones de la web
+El menú lateral consiste de un botón (acabé sustituyendolo por una imagen) que abre una barra lateral de búsqueda con enlaces a las secciones de la web.
 
 ![Side-Menu](assets/side-menu.png)
 
@@ -540,7 +543,7 @@ El menú lateral consiste de un botón (acabé sustituyendolo por una imagen) qu
 
 ```
 
-La sección Hero es la sección principal que contiene todos los article con la información
+La sección Hero es la sección principal que contiene todos los article con la información.
 
 ![Hero](assets/hero.png)
 
@@ -652,7 +655,7 @@ La sección Hero es la sección principal que contiene todos los article con la 
       </article>
     </section>
 ```
-La tabla contiene las dierentes manos de póker del juego
+La tabla contiene las dierentes manos de póker del juego.
 
 ![Tabla](assets/table.png)
 
@@ -729,7 +732,7 @@ La tabla contiene las dierentes manos de póker del juego
     </section>
 ```
 
-El formulario sirve para registrar a los usuarios que quieren recibir novedades sobre la página web
+El formulario sirve para registrar a los usuarios que quieren recibir novedades sobre la página web (aunque no se envíen los datos a ningún lado ya que para eso necesitariamos de una base de datos donde ingresar los datos al pulsar enviar).
 
 ![Formulario](assets/form.png)
 
@@ -750,4 +753,127 @@ El formulario sirve para registrar a los usuarios que quieren recibir novedades 
     </section>
 ```
 
-La galaería de imágenes contiene diferentes imágenes con 
+La galería de imágenes contiene diferentes imágenes sobre el gameplay del juego (las imágenes son sacadas de tiendas oficiales del juego), todas estas al pasar el cursor por encima hacen un efecto de zoom además de que al hacer click te llevan a la imagen ampliada.
+
+![Galería](assets/gallery.png)
+
+```html
+<section id="galery">
+      <h2>Galería de imágenes</h2>
+      <figure>
+        <a href="img/gallery1.png"><img src="img/gallery1.png" alt="Imagen galería 1"></a>
+        <a href="img/gallery2.png"><img src="img/gallery2.png" alt="Imagen galería 2"></a>
+        <a href="img/gallery3.png"><img src="img/gallery3.png" alt="Imagen galería 3"></a>
+        <a href="img/gallery4.png"><img src="img/gallery4.png" alt="Imagen galería 4"></a>
+        <a href="img/gallery5.png"><img src="img/gallery5.png" alt="Imagen galería 5"></a>
+        <a href="img/gallery6.png"><img src="img/gallery6.png" alt="Imagen galería 6"></a>
+        <a href="img/gallery7.png"><img src="img/gallery7.png" alt="Imagen galería 7"></a>
+        <a href="img/gallery8.png"><img src="img/gallery8.png" alt="Imagen galería 8"></a>
+        <a href="img/gallery9.png"><img src="img/gallery9.png" alt="Imagen galería 9"></a>
+        <a href="img/gallery10.png"><img src="img/gallery10.png" alt="Imagen galería 10"></a>
+        <a href="img/gallery11.png"><img src="img/gallery11.png" alt="Imagen galería 11"></a>
+        <a href="img/gallery12.png"><img src="img/gallery12.png" alt="Imagen galería 12"></a>
+      </figure>
+    </section>
+```
+
+Respecto a los enlaces en la web tengo una sección con enlaces a redes oficiales de Balatro además de contener varios enlaces aparte como al principio del hero (externo) y los de los menús de navegación (internos).
+
+![Nav](assets/nav.png)
+
+Aquí se encuentran enlaces internos que llevan a las diferentes secciones.
+
+```html
+<nav class="main-nav">
+      <ul>
+        <li><a href="#hero">Inicio</a></li>
+        <li><a href="#galery">Galería</a></li>
+        <li><a href="#table">Manos</a></li>
+        <li><a href="#form">Suscripción</a></li>
+        <li><a href="#RRSS">Contacto</a></li>
+      </ul>
+    </nav>
+```
+
+![Side](assets/side.png)
+
+Aquí se encuentran enlaces internos que llevan a las diferentes secciones.
+
+```html
+<nav id="sideMenu" class="side-menu">
+    <ul>
+        <li><a href="#hero">Inicio</a></li>
+        <li><a href="#galery">Galería de imágenes</a></li>
+        <li><a href="#table">Manos y su puntuación base</a></li>
+        <li><a href="#form">Suscripción a la web</a></li>
+        <li><a href="#RRSS">Redes sociales oficiales de Balatro</a></li>
+      </ul>
+  </nav>
+```
+
+![Blog](assets/blog.png)
+
+Aquí se encuentra un enlace externo al blog de Localthunk
+
+```html
+<a href="https://localthunk.com/"><strong><em class="golden">"LocalThunk"</em></strong>.</a>
+```
+
+![Cards](assets/cards.png)
+
+Aquí hay 2 enlaces externos que llevan a la wiki donde describen las funciones de ambos comodines.
+
+```html
+<figure>
+          <a href="https://balatro.fandom.com/es/wiki/Comodín"><img src="img/joker1.png" alt="Comodín" title="+4 Multi"></a>
+          <a href="https://balatro.fandom.com/es/wiki/Cara_aterradora"><img src="img/joker18.png" alt="Cara aterradora" title="Las cartas de figura jugadas otorgan +30 fichas cuando anotan"></a>
+        </figure>
+```
+
+![Galería](assets/gallery.png)
+
+Aquí se encuentran los enlaces externos que llevan a las imágenes completas de la galería.
+
+```html
+<h2>Galería de imágenes</h2>
+      <figure>
+        <a href="img/gallery1.png"><img src="img/gallery1.png" alt="Imagen galería 1"></a>
+        <a href="img/gallery2.png"><img src="img/gallery2.png" alt="Imagen galería 2"></a>
+        <a href="img/gallery3.png"><img src="img/gallery3.png" alt="Imagen galería 3"></a>
+        <a href="img/gallery4.png"><img src="img/gallery4.png" alt="Imagen galería 4"></a>
+        <a href="img/gallery5.png"><img src="img/gallery5.png" alt="Imagen galería 5"></a>
+        <a href="img/gallery6.png"><img src="img/gallery6.png" alt="Imagen galería 6"></a>
+        <a href="img/gallery7.png"><img src="img/gallery7.png" alt="Imagen galería 7"></a>
+        <a href="img/gallery8.png"><img src="img/gallery8.png" alt="Imagen galería 8"></a>
+        <a href="img/gallery9.png"><img src="img/gallery9.png" alt="Imagen galería 9"></a>
+        <a href="img/gallery10.png"><img src="img/gallery10.png" alt="Imagen galería 10"></a>
+        <a href="img/gallery11.png"><img src="img/gallery11.png" alt="Imagen galería 11"></a>
+        <a href="img/gallery12.png"><img src="img/gallery12.png" alt="Imagen galería 12"></a>
+      </figure>
+    </section>
+```
+
+![RRSS](assets/rrss.png)
+
+Aquí se encuentran una serie de enlaces externos que llevan a las redes sociales y a la tienda del juego.
+
+```html
+<section id="RRSS">
+      <h2>Redes sociales oficiales de Balatro</h2>
+      <ul>
+        <li><a href="https://x.com/BalatroGame">Twitter oficial de Balatro</a></li>
+        <li><a href="https://x.com/LocalThunk">Twitter de LocalThunk</a></li>
+        <li><a href="https://discord.com/invite/5mH3dNhjx2">Discord oficial de Balatro</a></li>
+        <li><a href="https://www.youtube.com/@playstack">Youtube oficial de Playstack (publisher)</a></li>
+      </ul>
+      <a href="https://store.steampowered.com/app/2379780/Balatro/" id="Steam"><img src="img/Gif_balatro.gif"></a>
+    </section>
+```
+
+![Footer](assets/footer.png)
+
+Aquí se encuentra un enlace interno que lleva al inicio de la página.
+
+```html
+<a href="#hero">&copy; 2025 — 1º DAM, IES Saladillo</a>
+```
