@@ -129,6 +129,7 @@ En este caso ya tenía las imágenes como miniaturas ya que al haber usado grid 
 
 ### Ejercicio 3B
 En este caso ya disponía de un efecto para cuando el ratón pasase por las imágenes, justamente "transform: scale(1.03);" que está aplicado a todas las imágenes de la página web que contienen cualquier tipo de enlace, respecto al borde se le ha añadido un borde con background-color a todas las imágenes cuando el cursor pasa por ellas.
+
 (Revisión 09/12/2025 17:48 - Me acabo de dar cuenta de que realmente en vez de background color, lo que se debería haber realizado es la propiedad border: seguido de los parámetros deseados, lo apunto como pequeña anotación).
 
 ### Ejercicio 3C
